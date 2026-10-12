@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   FaEnvelope,
   FaGithub,
@@ -9,46 +11,53 @@ export default function Home() {
   return (
     <main>
       {/* Navigation */}
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-8">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
         <div className="text-lg font-semibold">
           David Lopez
         </div>
 
         <div className="flex gap-6 text-sm">
-          <a href="#about" className="hover:opacity-60">
+          <a href="#about" className="transition hover:opacity-60">
             About
           </a>
 
-          <a href="#interests" className="hover:opacity-60">
-            Interests
+          <a href="#sports" className="transition hover:opacity-60">
+            Sports
           </a>
 
-          <a href="#projects" className="hover:opacity-60">
+          <a href="#methods" className="transition hover:opacity-60">
+            Methods
+          </a>
+
+          <a href="#projects" className="transition hover:opacity-60">
             Projects
           </a>
 
-          <a href="#contact" className="hover:opacity-60">
+          <a href="#contact" className="transition hover:opacity-60">
             Contact
           </a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="mx-auto max-w-5xl px-6 pb-32 pt-28">
+      <section className="mx-auto max-w-6xl px-6 pb-32 pt-28">
         <p className="mb-5 text-lg text-gray-500">
           Hello, I&apos;m David.
         </p>
 
-        <h1 className="max-w-3xl text-4xl font-semibold leading-[1.12] tracking-tight md:text-6xl">
-          Project Manager and Data Scientist building better decisions with data.
+        <h1 className="max-w-4xl text-4xl font-semibold leading-[1.12] tracking-tight md:text-6xl">
+          I use data science to understand performance, strategy, and
+          decision-making in sports.
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-600">
-          I combine project management, analytics, and data science with a growing
-          focus on machine learning and sports analytics.
+          I&apos;m a project management professional and NYU Data Science
+          graduate student building toward a career in sports analytics.
+          My work combines statistical methods, machine learning, data
+          engineering, and visualization across multiple sports.
         </p>
 
-        <div className="mt-10 flex gap-4">
+        <div className="mt-10 flex flex-wrap gap-4">
           <a
             href="#projects"
             className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:opacity-75"
@@ -57,10 +66,10 @@ export default function Home() {
           </a>
 
           <a
-            href="#about"
+            href="#methods"
             className="rounded-full border border-gray-300 px-6 py-3 text-sm font-medium transition hover:bg-gray-100"
           >
-            About Me
+            Explore Methods
           </a>
         </div>
       </section>
@@ -68,7 +77,7 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="mx-auto max-w-5xl border-t border-gray-200 px-6 py-24"
+        className="mx-auto max-w-6xl border-t border-gray-200 px-6 py-24"
       >
         <p className="mb-8 text-sm uppercase tracking-widest text-gray-500">
           About Me
@@ -77,83 +86,183 @@ export default function Home() {
         <div className="grid gap-12 md:grid-cols-2">
           <div>
             <h2 className="text-3xl font-medium leading-snug">
-              I bridge project management, data science, and technology.
+              Project management experience meets sports data science.
             </h2>
           </div>
 
           <div className="space-y-6 text-lg leading-8 text-gray-600">
             <p>
-              I am a project management professional with experience leading
-              complex technology, analytics, and enterprise transformation
-              initiatives.
+              My professional background is in project and program management,
+              where I&apos;ve led complex technology, analytics, and enterprise
+              transformation initiatives.
             </p>
 
             <p>
-              I am currently pursuing a Master&apos;s in Data Science at NYU,
-              expanding my work into machine learning, data engineering, and
-              statistical modeling.
+              I&apos;m currently pursuing a Master&apos;s in Data Science at
+              NYU, expanding my work into statistical modeling, machine
+              learning, data engineering, and computational analysis.
             </p>
 
             <p>
-              My long-term focus is applying data science to real-world
-              decision-making, with a particular interest in sports analytics.
+              My long-term focus is sports data science: using quantitative
+              methods to better understand players, teams, performance,
+              strategy, and decision-making.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Areas of Interest */}
+      {/* Sports */}
       <section
-        id="interests"
-        className="mx-auto max-w-5xl border-t border-gray-200 px-6 py-24"
+        id="sports"
+        className="mx-auto max-w-6xl border-t border-gray-200 px-6 py-24"
       >
-        <p className="mb-8 text-sm uppercase tracking-widest text-gray-500">
-          Areas of Interest
-        </p>
+        <div className="mb-12">
+          <p className="mb-5 text-sm uppercase tracking-widest text-gray-500">
+            Sports
+          </p>
 
-        <div className="grid gap-12 md:grid-cols-2">
-          <div className="border-t border-gray-300 pt-6">
+          <h2 className="max-w-3xl text-4xl font-medium tracking-tight">
+            One analytical toolkit. Different games.
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-2xl border border-gray-200 p-6 transition hover:border-gray-400">
+            <p className="mb-3 text-sm uppercase tracking-widest text-gray-400">
+              01
+            </p>
+
             <h3 className="text-2xl font-medium">
-              Data Science
+              Soccer
             </h3>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Using data, statistical analysis, and experimentation to uncover
-              patterns and support better decision-making.
+              Player performance, tournaments, tactical profiles, and player
+              evaluation.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 p-6 transition hover:border-gray-400">
+            <p className="mb-3 text-sm uppercase tracking-widest text-gray-400">
+              02
+            </p>
+
+            <h3 className="text-2xl font-medium">
+              Baseball
+            </h3>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Statcast, pitching, matchups, player performance, and forecasting.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 p-6 transition hover:border-gray-400">
+            <p className="mb-3 text-sm uppercase tracking-widest text-gray-400">
+              03
+            </p>
+
+            <h3 className="text-2xl font-medium">
+              Football
+            </h3>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Game prediction, matchups, upset modeling, and probabilistic
+              decision-making.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-200 p-6 transition hover:border-gray-400">
+            <p className="mb-3 text-sm uppercase tracking-widest text-gray-400">
+              04
+            </p>
+
+            <h3 className="text-2xl font-medium">
+              Basketball
+            </h3>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Player evaluation, similarity, lineups, clustering, and
+              performance analytics.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Methods */}
+      <section
+        id="methods"
+        className="mx-auto max-w-6xl border-t border-gray-200 px-6 py-24"
+      >
+        <div className="mb-12">
+          <p className="mb-5 text-sm uppercase tracking-widest text-gray-500">
+            Data Science Methods
+          </p>
+
+          <h2 className="max-w-3xl text-4xl font-medium tracking-tight">
+            The techniques behind the sports analysis.
+          </h2>
+        </div>
+
+        <div className="grid gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="border-t border-gray-300 pt-6">
+            <h3 className="text-xl font-medium">
+              PCA & Dimensionality Reduction
+            </h3>
+
+            <p className="mt-3 leading-7 text-gray-600">
+              Finding interpretable latent structure in high-dimensional data.
             </p>
           </div>
 
           <div className="border-t border-gray-300 pt-6">
-            <h3 className="text-2xl font-medium">
+            <h3 className="text-xl font-medium">
               Machine Learning
             </h3>
 
-            <p className="mt-4 leading-7 text-gray-600">
-              Building predictive models and exploring practical applications
-              of machine learning across real-world problems.
+            <p className="mt-3 leading-7 text-gray-600">
+              Building predictive models from performance and contextual
+              features.
             </p>
           </div>
 
           <div className="border-t border-gray-300 pt-6">
-            <h3 className="text-2xl font-medium">
-              Sports Analytics
+            <h3 className="text-xl font-medium">
+              Regression & Statistical Modeling
             </h3>
 
-            <p className="mt-4 leading-7 text-gray-600">
-              Applying data science to player evaluation, forecasting,
-              performance analysis, and decision-making in sports.
+            <p className="mt-3 leading-7 text-gray-600">
+              Estimating relationships, effects, and uncertainty.
             </p>
           </div>
 
           <div className="border-t border-gray-300 pt-6">
-            <h3 className="text-2xl font-medium">
-              Project & Program Management
+            <h3 className="text-xl font-medium">
+              Clustering
             </h3>
 
-            <p className="mt-4 leading-7 text-gray-600">
-              Leading complex initiatives through structured planning,
-              governance, risk management, analytics, and cross-functional
-              execution.
+            <p className="mt-3 leading-7 text-gray-600">
+              Discovering player groups, archetypes, and similarity structures.
+            </p>
+          </div>
+
+          <div className="border-t border-gray-300 pt-6">
+            <h3 className="text-xl font-medium">
+              Forecasting & Time Series
+            </h3>
+
+            <p className="mt-3 leading-7 text-gray-600">
+              Modeling performance through time and forecasting future outcomes.
+            </p>
+          </div>
+
+          <div className="border-t border-gray-300 pt-6">
+            <h3 className="text-xl font-medium">
+              Data Engineering
+            </h3>
+
+            <p className="mt-3 leading-7 text-gray-600">
+              Building clean and reproducible analytical datasets.
             </p>
           </div>
         </div>
@@ -162,140 +271,71 @@ export default function Home() {
       {/* Projects */}
       <section
         id="projects"
-        className="mx-auto max-w-5xl border-t border-gray-200 px-6 py-24"
+        className="mx-auto max-w-6xl border-t border-gray-200 px-6 py-24"
       >
         <div className="mb-12">
           <p className="mb-5 text-sm uppercase tracking-widest text-gray-500">
-            Selected Work
+            Selected Projects
           </p>
 
-          <h2 className="max-w-2xl text-4xl font-medium tracking-tight">
-            Projects combining data, technology, and decision-making.
+          <h2 className="max-w-3xl text-4xl font-medium tracking-tight">
+            Sports questions explored through data.
           </h2>
         </div>
 
-        <div className="space-y-6">
-          {/* Project 1 */}
-          <div className="rounded-2xl border border-gray-200 p-8 transition hover:border-gray-400">
-            <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-              <div className="max-w-2xl">
-                <p className="mb-3 text-sm text-gray-500">
-                  Sports Analytics
-                </p>
+        {/* Project Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Project 1 — Football Performance */}
+          <a
+            href="/projects/world-cup-pca"
+            className="group block overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-gray-400 hover:shadow-lg"
+          >
+            {/* Image */}
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
+              <Image
+                src="/projects/world-cup-pca/Rodri_Argentina_v_Spain_19_July_2026-163.jpg"
+                alt="Football player during a match"
+                fill
+                className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                priority
+              />
+            </div>
 
-                <h3 className="text-2xl font-medium">
-                  MLB Statcast Analytics
-                </h3>
+            {/* Card Content */}
+            <div className="p-6">
+              <p className="mb-3 text-xs uppercase tracking-widest text-gray-500">
+                Soccer · Player Performance
+              </p>
 
-                <p className="mt-4 leading-7 text-gray-600">
-                  Exploring Major League Baseball Statcast data to study player
-                  performance, underlying metrics, and predictive signals using
-                  modern data-science techniques.
-                </p>
+              <h3 className="text-2xl font-medium leading-snug">
+                What Are the Fundamental Attributes of Player Performance in Football?
+              </h3>
 
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Python
-                  </span>
+              <p className="mt-4 leading-7 text-gray-600">
+                The analysis identifies five interpretable dimensions: Direct
+                Engagement, Build-Up Involvement, Finishing Output, Creation,
+                and Attacking Box Presence.
+              </p>
 
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    SQL
-                  </span>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="rounded-full bg-gray-100 px-3 py-1 text-xs">
+                  Soccer
+                </span>
 
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Statcast
-                  </span>
+                <span className="rounded-full bg-gray-100 px-3 py-1 text-xs">
+                  Promax Rotation
+                </span>
 
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Machine Learning
-                  </span>
-                </div>
+                <span className="rounded-full bg-gray-100 px-3 py-1 text-xs">
+                  PCA
+                </span>
               </div>
 
-              <span className="text-sm text-gray-400">
-                In Progress
-              </span>
+              <p className="mt-5 text-[11px] leading-5 text-gray-400">
+                Photo: Bryan Berlin · CC BY-SA 4.0 · Cropped for display
+              </p>
             </div>
-          </div>
-
-          {/* Project 2 */}
-          <div className="rounded-2xl border border-gray-200 p-8 transition hover:border-gray-400">
-            <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-              <div className="max-w-2xl">
-                <p className="mb-3 text-sm text-gray-500">
-                  Predictive Analytics
-                </p>
-
-                <h3 className="text-2xl font-medium">
-                  NFL Upset Prediction Model
-                </h3>
-
-                <p className="mt-4 leading-7 text-gray-600">
-                  A quantitative framework for evaluating NFL matchups and
-                  identifying games with elevated upset potential through
-                  statistical indicators and matchup-level features.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Python
-                  </span>
-
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Modeling
-                  </span>
-
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Feature Engineering
-                  </span>
-                </div>
-              </div>
-
-              <span className="text-sm text-gray-400">
-                In Development
-              </span>
-            </div>
-          </div>
-
-          {/* Project 3 */}
-          <div className="rounded-2xl border border-gray-200 p-8 transition hover:border-gray-400">
-            <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-              <div className="max-w-2xl">
-                <p className="mb-3 text-sm text-gray-500">
-                  Enterprise Technology
-                </p>
-
-                <h3 className="text-2xl font-medium">
-                  AI Governance Framework
-                </h3>
-
-                <p className="mt-4 leading-7 text-gray-600">
-                  Designed a structured governance approach for evaluating and
-                  managing enterprise AI use cases across multiple business
-                  functions, improving visibility, prioritization, and
-                  decision-making.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    AI Governance
-                  </span>
-
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Analytics
-                  </span>
-
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-                    Program Management
-                  </span>
-                </div>
-              </div>
-
-              <span className="text-sm text-gray-400">
-                Professional Work
-              </span>
-            </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -304,12 +344,8 @@ export default function Home() {
         id="contact"
         className="mt-24 bg-[#11161c] px-6 py-16 text-center text-gray-300"
       >
-        <div className="mx-auto max-w-5xl">
-
-          {/* Social Icons */}
+        <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-center gap-8 text-3xl">
-
-            {/* Personal Email */}
             <a
               href="mailto:davidrlopezd@gmail.com"
               aria-label="Personal Email"
@@ -319,7 +355,6 @@ export default function Home() {
               <FaEnvelope />
             </a>
 
-            {/* GitHub */}
             <a
               href="https://github.com/dld388"
               target="_blank"
@@ -331,7 +366,6 @@ export default function Home() {
               <FaGithub />
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/davidrichardlopez"
               target="_blank"
@@ -343,7 +377,6 @@ export default function Home() {
               <FaLinkedin />
             </a>
 
-            {/* NYU Email */}
             <a
               href="mailto:dld388@nyu.edu"
               aria-label="NYU Email"
@@ -352,10 +385,8 @@ export default function Home() {
             >
               <FaGraduationCap />
             </a>
-
           </div>
 
-          {/* Copyright */}
           <p className="mt-10 text-base text-gray-400">
             Copyright © 2026{" "}
             <span className="font-medium text-green-500">
@@ -363,7 +394,6 @@ export default function Home() {
             </span>{" "}
             All Rights Reserved.
           </p>
-
         </div>
       </section>
     </main>
